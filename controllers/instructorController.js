@@ -1,22 +1,22 @@
-const Studnet = require('./../models/studentModel');
+const Instructor = require('./../models/tutorModel');
 
-exports.getAllStudnets = async (req, res) => {
+exports.getAllInstructors = async (req, res) => {
   try {
     // EXECUTE QUERY
-    // const features = new APIFeatures(Studnet.find(), req.query)
+    // const features = new APIFeatures(Instructor.find(), req.query)
     //   .filter()
     //   .sort()
     //   .limitFields()
     //   .paginate();
-    // const Studnet = await features.query;
-    const studnet = await Studnet.find();
+    // const Instructor = await features.query;
+    const Instructor = await Instructor.find();
 
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
-      results: studnet.length,
+      results: instructor.length,
       data: {
-        studnet
+        instructor
       }
     });
   } catch (err) {
@@ -27,15 +27,15 @@ exports.getAllStudnets = async (req, res) => {
   }
 };
 
-exports.getStudnet = async (req, res) => {
+exports.getInstructor = async (req, res) => {
   try {
-    const studnet = await Studnet.findById(req.params.id);
-    // Studnet.findOne({ _id: req.params.id })
+    const studnet = await Instructor.findById(req.params.id);
+    // Instructor.findOne({ _id: req.params.id })
 
     res.status(200).json({
       status: 'success',
       data: {
-        studnet
+        instructor
       }
     });
   } catch (err) {
@@ -46,17 +46,17 @@ exports.getStudnet = async (req, res) => {
   }
 };
 
-exports.createStudnet = async (req, res) => {
+exports.createInstructor = async (req, res) => {
   try {
-    // const newStudnet = new Studnet({})
-    // newStudnet.save()
+    // const newInstructor = new Instructor({})
+    // newInstructorsave()
 
-    const newStudnet = await Studnet.create(req.body);
+    const newInstructor = await Instructor.create(req.body);
 
     res.status(201).json({
       status: 'success',
       data: {
-        studnet: newStudnet
+        instructor: newInstructor
       }
     });
   } catch (err) {
@@ -67,17 +67,21 @@ exports.createStudnet = async (req, res) => {
   }
 };
 
-exports.updateStudnet = async (req, res) => {
+exports.updateInstructor = async (req, res) => {
   try {
-    const studnet = await Studnet.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true
-    });
+    const instructor = await Instructor.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+        runValidators: true
+      }
+    );
 
     res.status(200).json({
       status: 'success',
       data: {
-        studnet
+        instructor
       }
     });
   } catch (err) {
@@ -88,9 +92,9 @@ exports.updateStudnet = async (req, res) => {
   }
 };
 
-exports.deleteStudnet = async (req, res) => {
+exports.deleteInstructor = async (req, res) => {
   try {
-    await Studnet.findByIdAndDelete(req.params.id);
+    await Instructor.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: 'success',

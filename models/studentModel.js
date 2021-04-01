@@ -17,7 +17,7 @@ const studentSchema = new mongoose.Schema({
     required: [true, '']
   },
   CGPA: {
-    type: int,
+    type: Number,
     required: [true, '']
   },
   academicAdvisor: {
@@ -29,7 +29,7 @@ const studentSchema = new mongoose.Schema({
     required: [true, '']
   },
   numberOfSemster: {
-    type: int,
+    type: Number,
     required: [true, '']
   },
   dateGraduated: {
@@ -48,22 +48,3 @@ const studentSchema = new mongoose.Schema({
 const Student = mongoose.model('student', studentSchema);
 
 module.exports = Student;
-
-// const testSemster = new Semster({
-//   RegistrationStart: 2021 / 03 / 7,
-//   RegistrationEnd: 2021 / 03 / 10,
-//   ClassStart: 2021 / 03 / 14,
-//   ClassEnd: 2021 / 06 / 10,
-//   ModaifactionPeriodStart: 2021 / 03 / 14,
-//   ModaifactionPeriodEnd: 2021 / 03 / 18,
-//   Seeison: 'Summer'
-// });
-
-// testSemster
-//   .save()
-//   .then(doc => {
-//     console.log(doc);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });

@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 const semsterRouter = require('./routes/semsterRoutes.js');
-// const userRouter = require('./routes/userRoutes');
+const studentRoute = require('./routes/studentRoutes');
 
 const app = express();
 
@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 
 // 3) ROUTES
 app.use('/api/v1/semsters', semsterRouter);
+app.use('/api/v1/students', studentRoute);
 // app.use('/api/v1/users', userRouter);
 
 module.exports = app;
