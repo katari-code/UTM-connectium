@@ -1,4 +1,5 @@
 const Semester = require('./../models/semsterModel');
+
 exports.getAllSemsters = async (req, res) => {
   try {
     // EXECUTE QUERY
@@ -7,14 +8,15 @@ exports.getAllSemsters = async (req, res) => {
     //   .sort()
     //   .limitFields()
     //   .paginate();
-    const Semsters = await features.query;
+    // const Semsters = await features.query;
+    const semester = await Semester.find();
 
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
-      results: Semsters.length,
+      results: semester.length,
       data: {
-        Semsters
+        semester
       }
     });
   } catch (err) {
@@ -27,7 +29,7 @@ exports.getAllSemsters = async (req, res) => {
 
 exports.getSemster = async (req, res) => {
   try {
-    const semster = await Semster.findById(req.params.id);
+    const semster = await Semester.findById(req.params.id);
     // Semster.findOne({ _id: req.params.id })
 
     res.status(200).json({
@@ -67,7 +69,7 @@ exports.createSemster = async (req, res) => {
 
 exports.updateSemster = async (req, res) => {
   try {
-    const semster = await Semster.findByIdAndUpdate(req.params.id, req.body, {
+    const semester = await Semester.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true
     });
@@ -75,7 +77,7 @@ exports.updateSemster = async (req, res) => {
     res.status(200).json({
       status: 'success',
       data: {
-        semster
+        semester
       }
     });
   } catch (err) {
@@ -88,7 +90,7 @@ exports.updateSemster = async (req, res) => {
 
 exports.deleteSemster = async (req, res) => {
   try {
-    await Semster.findByIdAndDelete(req.params.id);
+    await semester.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: 'success',
