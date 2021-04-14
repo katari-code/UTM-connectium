@@ -1,5 +1,5 @@
 const express = require('express');
-const semsterController = require('./../controllers/semsterController');
+const courseController = require('./../controllers/courseController');
 
 const router = express.Router();
 
@@ -14,13 +14,13 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(semsterController.getAllSemsters)
-  .post(semsterController.createSemster);
+  .get(courseController.getAllCourse)
+  .post(courseController.createCourse);
 
 router
   .route('/:id')
-  .get(semsterController.getSemster)
-  .patch(semsterController.updateSemster)
-  .delete(semsterController.deleteSemster);
+  .get(courseController.getCourse)
+  .patch(courseController.updateCourse)
+  .delete(courseController.deleteCourse);
 
 module.exports = router;
