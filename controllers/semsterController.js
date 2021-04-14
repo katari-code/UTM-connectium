@@ -2,15 +2,7 @@ const Semester = require('./../models/semsterModel');
 
 exports.getAllSemsters = async (req, res) => {
   try {
-    // EXECUTE QUERY
-    // const features = new APIFeatures(Semster.find(), req.query)
-    //   .filter()
-    //   .sort()
-    //   .limitFields()
-    //   .paginate();
-    // const Semsters = await features.query;
     const semester = await Semester.find();
-
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',

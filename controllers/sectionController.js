@@ -2,13 +2,13 @@ const Section = require('./../models/sectionModel');
 
 exports.getAllSections = async (req, res) => {
   try {
-    const Section = await Section.find();
+    const section = await Section.find();
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
       results: Section.length,
       data: {
-        Section
+        section
       }
     });
   } catch (err) {

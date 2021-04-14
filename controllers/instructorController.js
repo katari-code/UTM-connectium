@@ -1,8 +1,8 @@
-const Instructor = require('./../models/instructorModel');
+const Staff = require('./../models/instructorModel');
 
 exports.getAllInstructors = async (req, res) => {
   try {
-    const Instructor = await Instructor.find();
+    const instructor = await Instructor.find();
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',

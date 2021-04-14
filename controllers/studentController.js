@@ -2,13 +2,7 @@ const Studnet = require('./../models/studentModel');
 
 exports.getAllStudnets = async (req, res) => {
   try {
-    // EXECUTE QUERY
-    // const features = new APIFeatures(Studnet.find(), req.query)
-    //   .filter()
-    //   .sort()
-    //   .limitFields()
-    //   .paginate();
-    // const Studnet = await features.query;
+
     const studnet = await Studnet.find();
 
     // SEND RESPONSE
@@ -31,7 +25,6 @@ exports.getStudnet = async (req, res) => {
   try {
     const studnet = await Studnet.findById(req.params.id);
     // Studnet.findOne({ _id: req.params.id })
-
     res.status(200).json({
       status: 'success',
       data: {

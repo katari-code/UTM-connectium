@@ -25,8 +25,8 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api/v1/semsters', semsterRouter);
-app.use('/api/v1/students', studentRoute);
+app.use('/v1/semsters', semsterRouter);
+app.use('/v1/students', studentRoute);
 // app.use('/api/v1/users', userRouter);
 
 module.exports = app;
