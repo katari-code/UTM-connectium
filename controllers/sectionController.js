@@ -1,14 +1,14 @@
-const Instructor = require('./../models/instructorModel');
+const Section = require('./../models/sectionModel');
 
-exports.getAllInstructors = async (req, res) => {
+exports.getAllSections = async (req, res) => {
   try {
-    const Instructor = await Instructor.find();
+    const Section = await Section.find();
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
-      results: instructor.length,
+      results: Section.length,
       data: {
-        instructor
+        Section
       }
     });
   } catch (err) {
@@ -19,15 +19,15 @@ exports.getAllInstructors = async (req, res) => {
   }
 };
 
-exports.getInstructor = async (req, res) => {
+exports.getSection = async (req, res) => {
   try {
-    const instructor = await Instructor.findById(req.params.id);
-    // Instructor.findOne({ _id: req.params.id })
+    const section = await Section.findById(req.params.id);
+    // Section.findOne({ _id: req.params.id })
 
     res.status(200).json({
       status: 'success',
       data: {
-        instructor
+        section
       }
     });
   } catch (err) {
@@ -38,17 +38,17 @@ exports.getInstructor = async (req, res) => {
   }
 };
 
-exports.createInstructor = async (req, res) => {
+exports.createSection = async (req, res) => {
   try {
-    // const newInstructor = new Instructor({})
-    // newInstructorsave()
+    // const newSection = new Section({})
+    // newSectionsave()
 
-    const newInstructor = await Instructor.create(req.body);
+    const newSection = await Section.create(req.body);
 
     res.status(201).json({
       status: 'success',
       data: {
-        instructor: newInstructor
+        section: newSection
       }
     });
   } catch (err) {
@@ -59,9 +59,9 @@ exports.createInstructor = async (req, res) => {
   }
 };
 
-exports.updateInstructor = async (req, res) => {
+exports.updateSection = async (req, res) => {
   try {
-    const instructor = await Instructor.findByIdAndUpdate(
+    const section = await Section.findByIdAndUpdate(
       req.params.id,
       req.body,
       {
@@ -73,7 +73,7 @@ exports.updateInstructor = async (req, res) => {
     res.status(200).json({
       status: 'success',
       data: {
-        instructor
+        section
       }
     });
   } catch (err) {
@@ -84,9 +84,9 @@ exports.updateInstructor = async (req, res) => {
   }
 };
 
-exports.deleteInstructor = async (req, res) => {
+exports.deleteSection = async (req, res) => {
   try {
-    await Instructor.findByIdAndDelete(req.params.id);
+    await Section.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: 'success',
