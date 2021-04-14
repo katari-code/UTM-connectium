@@ -4,15 +4,15 @@ const DepartmentSchema = new mongoose.Schema({
     type: String,
     required: [true, '']
   },
-  NumberSemster: {
+  numberSemster: {
     type: String,
     required: [true, '']
   },
-  CreditsRequired: {
+  creditsRequired: {
     type: String,
     required: [true, '']
   },
-  Curriculum: {
+  curriculum: {
     type: Array,
     required: [true, '']
   }
