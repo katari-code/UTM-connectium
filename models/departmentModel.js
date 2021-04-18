@@ -12,9 +12,11 @@ const DepartmentSchema = new mongoose.Schema({
     type: String,
     required: [true, '']
   },
-  curriculum: {
-    type: Array,
+  curriculum:
+  {
+    type:Object,
     required: [true, '']
+
   }
 });
 

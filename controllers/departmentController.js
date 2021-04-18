@@ -2,13 +2,7 @@ const Department = require('./../models/departmentModel');
 
 exports.getAllDepartments = async (req, res) => {
   try {
-    // EXECUTE QUERY
-    // const features = new APIFeatures(Department.find(), req.query)
-    //   .filter()
-    //   .sort()
-    //   .limitFields()
-    //   .paginate();
-    // const Department = await features.query;
+ 
     const department = await Department.find();
 
     // SEND RESPONSE
@@ -29,7 +23,7 @@ exports.getAllDepartments = async (req, res) => {
 
 exports.getDepartment = async (req, res) => {
   try {
-    const studnet = await Department.findById(req.params.id);
+    const department = await Department.findById(req.params.id);
     // Department.findOne({ _id: req.params.id })
 
     res.status(200).json({
@@ -56,7 +50,7 @@ exports.createDepartment = async (req, res) => {
     res.status(201).json({
       status: 'success',
       data: {
-        Department: newDepartment
+        department: newDepartment
       }
     });
   } catch (err) {

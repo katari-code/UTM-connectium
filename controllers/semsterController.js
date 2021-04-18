@@ -43,7 +43,7 @@ exports.createSemster = async (req, res) => {
     // const newSemster = new Semster({})
     // newSemster.save()
 
-    const newSemster = await Semster.create(req.body);
+    const newSemster = await Semester.create(req.body);
 
     res.status(201).json({
       status: 'success',
