@@ -1,14 +1,10 @@
 const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, '']
+  UID:{
+     type:mongoose.Schema.ObjectId,
+     ref:"User"
   },
-  email: {
-    type: String,
-    required: [true, '']
-  },
-  ACID: {
+  MatricNumer: {
     type: String,
     required: [true, '']
   },

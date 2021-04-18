@@ -1,0 +1,71 @@
+{
+    "title": "SOFTWARE ENGINEERING",
+    "numberSemster": 8,
+    "creditsRequired": 131,
+    "curriculum": {
+        "1": [
+            "607c697c0eb3ce30a42e45f9",
+            "607c69a30eb3ce30a42e45fa",
+            "607c69bb0eb3ce30a42e45fb",
+            "607c69ca0eb3ce30a42e45fc",
+            "607c69da0eb3ce30a42e45fd",
+            "607c69da0eb3ce30a42e45fe"
+        ],
+        "2": [
+            "607c6a090eb3ce30a42e45ff",
+            "607c6a130eb3ce30a42e4600",
+            "607c6a220eb3ce30a42e4601",
+            "607c6a3d0eb3ce30a42e4602",
+            "607c6a4b0eb3ce30a42e4603",
+            "607c6a4f0eb3ce30a42e4604"
+        ],
+        "3": [
+            "607c6a750eb3ce30a42e4606",
+            "607c6a820eb3ce30a42e4607",
+            "607c6a970eb3ce30a42e4608",
+            "607c6aa30eb3ce30a42e4609",
+            "607c6aad0eb3ce30a42e460a",
+            "607c6aad0eb3ce30a42e460a"
+        ],
+        "4": [
+            "607c6abf0eb3ce30a42e460b",
+            "607c6acf0eb3ce30a42e460c",
+            "607c6add0eb3ce30a42e460d",
+            "607c6ae90eb3ce30a42e460e",
+            "607c6afa0eb3ce30a42e460f"
+        ],
+        "5": [
+            "607c6afa0eb3ce30a42e460f",
+            "607c6b0e0eb3ce30a42e4610",
+            "607c6b190eb3ce30a42e4611",
+            "607c6c730eb3ce30a42e4624",
+            "607c6c870eb3ce30a42e4625",
+            "607c6c9e0eb3ce30a42e4626"
+        ],
+        "6": [
+            "607c6b390eb3ce30a42e4613",
+            "607c6b4f0eb3ce30a42e4614",
+            "607c6b5f0eb3ce30a42e4615",
+            "607c6b700eb3ce30a42e4616",
+            "607c6c160eb3ce30a42e461f",
+            "607c6c640eb3ce30a42e4623",
+            "607c6cc40eb3ce30a42e4628"
+        ],
+        "7": [
+            "607c6b920eb3ce30a42e4617",
+            "607c6ba30eb3ce30a42e4618",
+            "607c6c090eb3ce30a42e461e",
+            "607c6c730eb3ce30a42e4624",
+            "607c6bc50eb3ce30a42e461a",
+            "607c6bc50eb3ce30a42e461a",
+            "607c6cb30eb3ce30a42e4627"
+        ],
+        "8": [
+            "607c6b920eb3ce30a42e4617",
+            "607c6ba30eb3ce30a42e4618",
+            "607c6bee0eb3ce30a42e461d",
+            "607c6c220eb3ce30a42e4620",
+            "607c6bc50eb3ce30a42e461a"
+        ]
+    }
+}

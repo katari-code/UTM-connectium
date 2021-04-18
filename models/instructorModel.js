@@ -1,36 +1,23 @@
 const mongoose = require('mongoose');
 const InstructorSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, '']
-  },
-  email: {
-    type: String,
-    required: [true, '']
-  },
-  password: {
-    type: String,
-    required: [true, '']
-  },
-  profilePhoto: {
-    type: String,
-    required: [true, '']
-  },
-  ACID: {
-    type: String,
+  user:{
+    type: mongoose.Schema.ObjectId,
+    ref: 'Users',
     required: [true, '']
   },
   department: {
-    type: String,
+    type: mongoose.Schema.ObjectId,
+    ref: 'Departments',
     required: [true, '']
   },
-  mentees: {
-    type: Array,
+  mentees: [{
+    type: mongoose.Schema.ObjectId,
+    ref:"Student",
     required: [true, '']
-  },
-  officeInfo: {
-    type: Array
-  }
+  }],
+  officeInfo:[{
+    type: Object,
+  }],
 });
 
 const Instructor = mongoose.model('Staff', InstructorSchema);

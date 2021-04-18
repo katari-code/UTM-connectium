@@ -1,0 +1,14 @@
+{
+    "section":[
+        {
+            "instructorId": "",
+            "courseId": "",
+            "semsterId": "",
+            "numberOfstudent": 28,
+            "status": "",
+            "ModaifactionPeriodEnd": "",
+            "capacity":"",
+            "sectionNumber":"",
+        }
+    ]
+}
