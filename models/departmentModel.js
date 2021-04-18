@@ -12,12 +12,12 @@ const DepartmentSchema = new mongoose.Schema({
     type: String,
     required: [true, '']
   },
-  curriculum:
-  {
-    type:Object,
+  curriculum:[{
+    type: mongoose.Schema.ObjectId,
+    ref:"courses",
     required: [true, '']
-
-  }
+  }]
+  
 });
 
 const Department = mongoose.model('Departments', DepartmentSchema);

@@ -17,9 +17,10 @@ const InstructorSchema = new mongoose.Schema({
   }],
   officeInfo:[{
     type: Object,
+    default:{},
   }],
 });
 
-const Instructor = mongoose.model('Staff', InstructorSchema);
+const Instructor = mongoose.model('instructor', InstructorSchema);
 
 module.exports = Instructor;

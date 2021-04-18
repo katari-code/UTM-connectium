@@ -1,4 +1,4 @@
-const Staff = require('./../models/instructorModel');
+const Instructor = require('./../models/instructorModel');
 
 exports.getAllInstructors = async (req, res) => {
   try {

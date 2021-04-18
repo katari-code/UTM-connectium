@@ -1,9 +1,9 @@
 {
     "section":[
         {
-            "instructorId": "",
-            "courseId": "",
-            "semsterId": "",
+            "user": "607bd8e792c63325507ae421",
+            "department": "607c742f834b5d47c82ec65c",
+            "mentees": "",
             "numberOfstudent": 28,
             "status": "",
             "ModaifactionPeriodEnd": "",

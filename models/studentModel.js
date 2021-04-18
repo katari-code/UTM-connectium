@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
-  UID:{
+  User:{
      type:mongoose.Schema.ObjectId,
      ref:"User"
   },

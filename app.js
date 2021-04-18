@@ -15,6 +15,7 @@ const semsterRouter = require('./routes/semsterRoutes.js');
 const studentRouter = require('./routes/studentRoutes');
 const departmentRoutuer = require('./routes/departmentRoutes');
 const sectionRoutuer = require('./routes/sectionRoutes');
+const instructorRoutes = require('./routes/instructorRoutes');
 
 const courseRouter = require('./routes/courseRoutes');
 
@@ -71,6 +72,7 @@ app.use('/api/v1/sections', sectionRoutuer);
 app.use('/api/v1/departments', departmentRoutuer);
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/instructors', instructorRoutes);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
