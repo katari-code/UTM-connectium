@@ -9,7 +9,6 @@ const xss = require('xss-clean');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 
-
 const userRouter = require('./routes/userRoutes');
 //utm-connectium
 const semsterRouter = require('./routes/semsterRoutes.js');
@@ -35,7 +34,7 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again in an hour!'
 });
 
-app.use('/v1', limiter);
+app.use('/api/v1', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
@@ -61,10 +60,10 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/v1/semsters', semsterRouter);
-app.use('/v1/courses', courseRouter);
-app.use('/v1/students', studentRouter);
-app.use('/v1/users', userRouter);
+app.use('/api/v1/semsters', semsterRouter);
+app.use('/api/v1/courses', courseRouter);
+app.use('/api/v1/students', studentRouter);
+app.use('/api/v1/users', userRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
