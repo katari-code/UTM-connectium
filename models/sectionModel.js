@@ -27,6 +27,6 @@ const sectionSchema = new mongoose.Schema({
 
 });
 
-const Section = mongoose.model('Section', sectionSchema);
+const Section = mongoose.model('Sections', sectionSchema);
 
 module.exports = Section;
