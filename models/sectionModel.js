@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const sectionSchema = new mongoose.Schema({
   instructorId: {
-    type: int,
+    type: Number,
     required: [true, '']
   },
   courseId: {
@@ -19,6 +19,9 @@ const sectionSchema = new mongoose.Schema({
   capacity: {
     type: String,
     required: [true, '']
+  },
+  NumberOfstudent:{
+    type:String,
   },
   date: [{  
     type: String,

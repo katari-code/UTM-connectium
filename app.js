@@ -14,6 +14,7 @@ const userRouter = require('./routes/userRoutes');
 const semsterRouter = require('./routes/semsterRoutes.js');
 const studentRouter = require('./routes/studentRoutes');
 const departmentRoutuer = require('./routes/departmentRoutes');
+const sectionRoutuer = require('./routes/sectionRoutes');
 
 const courseRouter = require('./routes/courseRoutes');
 
@@ -66,6 +67,7 @@ app.use((req, res, next) => {
 // 3) ROUTES
 app.use('/api/v1/semsters', semsterRouter);
 app.use('/api/v1/courses', courseRouter);
+app.use('/api/v1/sections', sectionRoutuer);
 app.use('/api/v1/departments', departmentRoutuer);
 app.use('/api/v1/students', studentRouter);
 app.use('/api/v1/users', userRouter);
