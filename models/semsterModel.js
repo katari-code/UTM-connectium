@@ -30,6 +30,6 @@ const semsterSchema = new mongoose.Schema({
   }
 });
 
-const Semster = mongoose.model('Semester', semsterSchema);
+const Semster = mongoose.model('Semesters', semsterSchema);
 
 module.exports = Semster;
