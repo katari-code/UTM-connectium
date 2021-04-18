@@ -1,24 +1,28 @@
 const mongoose = require('mongoose');
 const sectionSchema = new mongoose.Schema({
-  instructorIds: {
+  instructor: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Instructors',
+    // required: [true, '']
+    default:""
+  },
+  course: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Courses',
+    default:""
+    // required: [true, '']
+  },
+  semster: {
     type: mongoose.Schema.ObjectId,
     ref: 'Semesters',
     // required: [true, '']
+    default:""
   },
-  courseIds: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Semesters',
-    // required: [true, '']
-  },
-  semsterIds: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Semesters',
-    // required: [true, '']
-  },
-  studentIds: [
+  students: [
     {
       type: mongoose.Schema.ObjectId,
-      ref: 'Studnets'
+      ref: 'Studnets',
+      default:""
     }
   ],
   sectionNumber: {
@@ -29,10 +33,11 @@ const sectionSchema = new mongoose.Schema({
   status: {
     type: String,
     enum: ['Open for registration', 'Full', 'Colsed'],
+    required: [true,""],
     default: 'Open for registration'
   },
   capacity: {
-    type: String,
+    type: Number,
     required: [true, '']
   },
   numberOfstudent: {

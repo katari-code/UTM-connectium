@@ -1,43 +1,49 @@
 const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
-  User:{
+  user:{
      type:mongoose.Schema.ObjectId,
-     ref:"User"
+     ref:"Users"
   },
-  MatricNumer: {
+  matricNumer: {
     type: String,
     required: [true, '']
   },
   department: {
-    type: String,
-    required: [true, '']
+    type: mongoose.Schema.ObjectId,
+    ref: 'Departments',
+   required: [true, '']
   },
   CGPA: {
     type: Number,
     required: [true, '']
   },
   academicAdvisor: {
-    type: String,
+    type: mongoose.Schema.ObjectId,
+    ref: 'Instructors',
     required: [true, '']
   },
   dataEnrolled: {
-    type: String,
-    required: [true, '']
+    type: Date,
+    // required: [true, '']
+    default: Date.now(),
   },
   numberOfSemster: {
     type: Number,
-    required: [true, '']
+    required: [true, ''],
+    default: 3
   },
   dateGraduated: {
     type: Date,
-    required: [true, '']
+    default: Date.now(),
   },
-  courses: {
-    type: Array,
+  courses: [{
+    type:mongoose.Schema.ObjectId,
+    ref:"Courses",
     required: [true, '']
-  },
+  }],
   regestrationSlips: {
-    type: Array
+    type: Array,
+    default:[]
   }
 });
 

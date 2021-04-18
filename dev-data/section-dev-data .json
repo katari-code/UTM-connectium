@@ -1,14 +1,20 @@
 {
-    "section":[
+    "section": [
         {
-            "user": "607bd8e792c63325507ae421",
-            "department": "607c742f834b5d47c82ec65c",
-            "mentees": "",
-            "numberOfstudent": 28,
-            "status": "",
-            "ModaifactionPeriodEnd": "",
-            "capacity":"",
-            "sectionNumber":"",
+            "instructor": "607bd8e792c63325507ae421",
+            "course": "607c742f834b5d47c82ec65c",
+            "semster": "607c7b1b671717456c8dc82b",
+            "sectionNumber": 3,
+            "status": "Open for registration",
+            "capacity": 20,
+            "numberOfstudent": 12,
+            "date": [
+                {
+                    "day": "Mon",
+                    "startAt": "8:00",
+                    "endAt": "10:00"
+                }
+            ]
         }
     ]
 }

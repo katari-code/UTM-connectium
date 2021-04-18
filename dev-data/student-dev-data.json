@@ -1,7 +1,20 @@
 {
-    "student":[
+    "student": [
         {
-            
+            "user": "607c9b289927541df4aa068d",
+            "matricNumer": "A17CS4018",
+            "department": "607c8fc899918d4e34706cb2",
+            "CGPA": 3.75,
+            "academicAdvisor": "607c8cc473f54c17746c39b8",
+            "numberOfSemster": 3,
+            "courses": [
+                "607c697c0eb3ce30a42e45f9",
+                "607c69a30eb3ce30a42e45fa",
+                "607c69bb0eb3ce30a42e45fb",
+                "607c69ca0eb3ce30a42e45fc",
+                "607c69ca0eb3ce30a42e45fd",
+                "607c69fa0eb3ce30a42e45fe"
+            ]
         }
     ]
 }
