@@ -30,7 +30,7 @@ const studentSchema = new mongoose.Schema({
   numberOfSemster: {
     type: Number,
     required: [true, ''],
-    default: 3
+    default: 2
   },
   dateGraduated: {
     type: Date,
