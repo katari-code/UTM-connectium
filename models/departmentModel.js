@@ -4,7 +4,7 @@ const DepartmentSchema = new mongoose.Schema({
     type: String,
     required: [true, '']
   },
-  Code: {
+  code: {
     type:String,
     enum:['SECJ', 'SECV', 'SECPH', 'SECR']
   },
