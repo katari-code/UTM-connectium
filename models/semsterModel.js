@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
 const semsterSchema = new mongoose.Schema({
-  RegistrationStart: {
-    type: Date,
+  Semster: {
+    type: String,
+    enum: ['September','February'],
+  },
+  order: {
+    type: Number,
     required: [true, '']
   },
-  RegistrationEnd: {
-    type: Date,
+  curriculum:[{
+    type: mongoose.Schema.ObjectId,
+    ref:"courses",
     required: [true, '']
-  },
-  ClassStart: {
-    type: Date,
-    required: [true, '']
-  },
-  ClassEnd: {
+  }],
+  courses: {
     type: Date,
     required: [true, '']
   },

@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
+
 const courseSchema = new mongoose.Schema({
-  offiredOn: {
-    type: String,
-    default: "sep"
-  },
   courseTitle: {
     type: String,
     required: [true, '']
@@ -14,15 +11,27 @@ const courseSchema = new mongoose.Schema({
   },
   preRequisite: {
     type: Boolean,
-    default: false,
+    default: false
   },
   isPublicCourse: {
     type: Boolean,
-    default: false,
+    default: false
   },
   creditNumber: {
     type: Number,
     required: [true, '']
+  },
+  order: {
+    type: Number,
+    required: [true, '']
+  },
+  isPublicCourse: {
+    type: Boolean,
+    required: [true, '']
+  },
+  belongTo: {
+    type:[String],
+    enum:['All', 'SECJ', 'SECV', 'SECPH', 'SECR']
   }
 });
 
