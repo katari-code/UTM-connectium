@@ -13,6 +13,12 @@ const courseSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  preRequisite:{
+    type : Array,
+    type: mongoose.Schema.ObjectId,
+    ref:"courses",
+    required: [false, '']
+  },
   isPublicCourse: {
     type: Boolean,
     default: false
@@ -29,10 +35,10 @@ const courseSchema = new mongoose.Schema({
     type: Boolean,
     required: [true, '']
   },
-  belongTo: {
-    type:[String],
+  belongTo: [{
+    type:String,
     enum:['All', 'SECJ', 'SECV', 'SECPH', 'SECR']
-  }
+  }],
 });
 
 const Course = mongoose.model('Courses', courseSchema);
