@@ -26,14 +26,15 @@ const courseSchema = new mongoose.Schema({
     type: Number,
     required: [true, '']
   },
-  isPublicCourse: {
-    type: Boolean,
-    required: [true, '']
-  },
   belongTo: [{
     type:String,
     enum:['All', 'SECJ', 'SECV', 'SECPH', 'SECR']
   }],
+  avaliabieFor: {
+    type:String,
+    enum:['All', 'International', 'Malaysian'],
+    default:"All"
+  },
 });
 
 const Course = mongoose.model('Courses', courseSchema);
