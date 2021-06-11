@@ -4,20 +4,18 @@ const DepartmentSchema = new mongoose.Schema({
     type: String,
     required: [true, '']
   },
+  Code: {
+    type:String,
+    enum:['SECJ', 'SECV', 'SECPH', 'SECR']
+  },
   numberSemster: {
-    type: String,
+    type: Number,
     required: [true, '']
   },
   creditsRequired: {
-    type: String,
+    type: Number,
     required: [true, '']
   },
-  curriculum:[{
-    type: mongoose.Schema.ObjectId,
-    ref:"courses",
-    required: [true, '']
-  }]
-  
 });
 
 const Department = mongoose.model('Departments', DepartmentSchema);
