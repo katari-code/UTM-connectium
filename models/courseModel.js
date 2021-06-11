@@ -13,6 +13,10 @@ const courseSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  preRequisiteCodes: [{
+    type: mongoose.Schema.ObjectId,
+    ref:"courses",
+  }],
 
   isPublicCourse: {
     type: Boolean,
