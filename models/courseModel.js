@@ -16,6 +16,7 @@ const courseSchema = new mongoose.Schema({
   preRequisiteCodes: [{
     type: mongoose.Schema.ObjectId,
     ref:"courses",
+    default:[],
   }],
 
   isPublicCourse: {

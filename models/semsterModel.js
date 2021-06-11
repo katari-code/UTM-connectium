@@ -13,22 +13,7 @@ const semsterSchema = new mongoose.Schema({
     ref:"courses",
     required: [true, '']
   }],
-  courses: {
-    type: Date,
-    required: [true, '']
-  },
-  ModaifactionPeriodStart: {
-    type: Date,
-    required: [true, '']
-  },
-  ModaifactionPeriodEnd: {
-    type: Date,
-    required: [true, '']
-  },
-  Seeison: {
-    type: String,
-    required: [true, '']
-  }
+
 });
 
 const Semster = mongoose.model('Semesters', semsterSchema);
