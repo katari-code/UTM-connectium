@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === 'development') {
 //   message: 'Too many requests from this IP, please try again in an hour!'
 // });
 
-app.use('/api/v1', limiter);
+// app.use('/api/v1', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
