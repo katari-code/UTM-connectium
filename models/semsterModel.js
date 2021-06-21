@@ -27,6 +27,10 @@ const semsterSchema = new mongoose.Schema({
     type: Date,
     required: [true, '']
   },
+  DEnd: {
+    type: Date,
+    required: [true, '']
+  },
   type: {
     type: String,
     enum: ['Planning', 'On going']
