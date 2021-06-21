@@ -61,14 +61,10 @@ exports.createCourse = async (req, res) => {
 
 exports.updateCourse = async (req, res) => {
   try {
-    const course = await Course.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      {
-        new: true,
-        runValidators: true
-      }
-    );
+    const course = await Course.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
 
     res.status(200).json({
       status: 'success',

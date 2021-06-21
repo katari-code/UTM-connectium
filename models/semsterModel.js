@@ -1,19 +1,40 @@
 const mongoose = require('mongoose');
 const semsterSchema = new mongoose.Schema({
-  Semster: {
+  labale: {
+    type: String
+  },
+  RStart: {
+    type: Date,
+    required: [true, '']
+  },
+  REnd: {
+    type: Date,
+    required: [true, '']
+  },
+  MStart: {
+    type: Date,
+    required: [true, '']
+  },
+  MEnd: {
+    type: Date,
+    required: [true, '']
+  },
+  CStart: {
+    type: Date,
+    required: [true, '']
+  },
+  CEnd: {
+    type: Date,
+    required: [true, '']
+  },
+  type: {
     type: String,
-    enum: ['September','February'],
+    enum: ['Planning', 'On going']
   },
-  order: {
-    type: Number,
-    required: [true, '']
-  },
-  curriculum:[{
-    type: mongoose.Schema.ObjectId,
-    ref:"courses",
-    required: [true, '']
-  }],
-
+  status: {
+    type: String,
+    enum: ['Summer', 'Running', 'Short Semester']
+  }
 });
 
 const Semster = mongoose.model('Semesters', semsterSchema);
