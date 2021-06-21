@@ -82,7 +82,7 @@ exports.updateSemster = async (req, res) => {
 
 exports.deleteSemster = async (req, res) => {
   try {
-    await semester.findByIdAndDelete(req.params.id);
+    await Semester.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: 'success',
