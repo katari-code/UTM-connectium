@@ -33,11 +33,11 @@ const semsterSchema = new mongoose.Schema({
   },
   type: {
     type: String,
-    enum: ['Planning', 'On going']
+    enum: ['Summer', 'ٌRaining', 'Short Semester']
   },
   status: {
     type: String,
-    enum: ['Summer', 'Running', 'Short Semester']
+    enum: ['Planning', 'On going']
   }
 });
 
