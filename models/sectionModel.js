@@ -1,49 +1,58 @@
 const mongoose = require('mongoose');
 const sectionSchema = new mongoose.Schema({
-  instructor: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Instructors',
+  instructorId: {
+    // type: mongoose.Schema.ObjectId,
+    // ref: 'users',
+    type: String,
+    required: [true, ''],
+
     // required: [true, '']
-    default:""
+    default: ''
   },
-  course: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Courses',
-    default:""
+  courseId: {
+    // type: mongoose.Schema.ObjectId,
+    // ref: 'courses',
+    type: String,
+    required: [true, ''],
+
+    default: ''
     // required: [true, '']
   },
-  semster: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Semesters',
+  departmentCode: {
+    type: String,
+    required: [true, ''],
+
+    default: ''
     // required: [true, '']
-    default:""
+  },
+  semsterId: {
+    // type: mongoose.Schema.ObjectId,
+    // required: [true, ''],
+    // ref: 'semesters',
+    // required: [true, '']
+    type: String,
+    type: String,
+    default: ''
   },
   students: [
     {
-      type: mongoose.Schema.ObjectId,
-      ref: 'Studnets',
-      default:""
+      // type: mongoose.Schema.ObjectId,
+      // ref: 'users',
+      type: String,
+      default: '[]'
     }
   ],
-  sectionNumber: {
-    type:Number,
-    required: [true,""],
-    default:3
-  },
-  status: {
-    type: String,
-    enum: ['Open for registration', 'Full', 'Colsed'],
-    required: [true,""],
-    default: 'Open for registration'
-  },
+
+  // status: {
+  //   type: String,
+  //   enum: ['Open for registration', 'Full', 'Closed'],
+  //   default: 'Open for registration'
+  // },
   capacity: {
     type: Number,
     required: [true, '']
   },
-  numberOfstudent: {
-    type: Number,
-    default: 28
-  },
+
   date: [
     {
       type: Object,
