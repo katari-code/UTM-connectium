@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 const sectionSchema = new mongoose.Schema({
   instructorId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'users',
+    ref: 'Users',
     required: [true, ''],
     default: ''
   },
   courseId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'courses',
+    ref: 'Courses',
     required: [true, ''],
     default: ''
   },
@@ -19,7 +19,7 @@ const sectionSchema = new mongoose.Schema({
   },
   semsterId: {
     type: mongoose.Schema.ObjectId,
-    ref: 'semesters',
+    ref: 'Semesters',
     default: ''
   },
   students: [
@@ -38,6 +38,16 @@ const sectionSchema = new mongoose.Schema({
       required: [true, '']
     }
   ]
+});
+
+sectionSchema.pre(/^find/, function(next) {
+  this.populate({
+    path: 'instructorId'
+  })
+    .populate({ path: 'semsterId' })
+    .populate({ path: 'courseId' });
+
+  next();
 });
 
 const Section = mongoose.model('Sections', sectionSchema);
